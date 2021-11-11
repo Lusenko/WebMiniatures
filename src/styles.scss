@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 $mainBackground: #1C2A2D;
-@font-face { font-family: Gilroy; src: url('/assets/font'); }
+
+@font-face { font-family: Gilroy; src: url('/src/assets/font'); }
 body {
   padding: 0;
   margin: 0;
@@ -37,3 +38,6 @@ ul, li {
   padding: 0 48px;
   margin: 0 auto;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

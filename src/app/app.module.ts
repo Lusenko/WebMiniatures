@@ -6,12 +6,14 @@ import { HeaderComponent } from './header/header.component';
 import {SideMenuComponent} from "./side-menu/side-menu.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

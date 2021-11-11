@@ -1,0 +1,11 @@
+.main{
+  display: flex;
+
+  app-side-menu{
+    max-width: 320px;
+    width: 100%;
+  }
+  app-main{
+    width: 100%;
+  }
+}

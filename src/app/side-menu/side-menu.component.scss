@@ -1,0 +1,45 @@
+@import "~src/styles";
+.side-menu{
+  max-width: 320px;
+  width: 100%;
+  background: $mainBackground;
+
+  .side-menu__body{
+    .side-menu__item{
+      padding: 38px 0 0 0;
+
+      .item-link{
+        padding: 0 0 0 32px;
+        margin: 0 0 32px 0;
+
+        & >:not(:last-child){
+          margin: 0 0 32px 0;
+        }
+
+        li{
+          .link{
+            font-size: 16px;
+            font-family: Gilroy,sans-serif;
+            font-weight: 700;
+
+            line-height: calc(24/16*100%);
+
+            letter-spacing: .5px;
+
+            color: white;
+          }
+        }
+      }
+      .item-line{
+        margin: 0 -48px;
+        border-bottom: 1px solid #2E3B3E;
+      }
+      .item-add-catalogue{
+        display: flex;
+        align-items: center;
+
+
+      }
+    }
+  }
+}

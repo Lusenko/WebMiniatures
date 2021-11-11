@@ -15,6 +15,9 @@
 
       .header-logo__text{
         font-size: 18px;
+        line-height: calc(24/18*100%);
+        letter-spacing: 0.065em;
+        text-transform: uppercase;
         font-family: Gilroy, sans-serif;
         color: white;
       }

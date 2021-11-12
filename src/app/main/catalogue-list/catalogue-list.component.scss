@@ -1,0 +1,67 @@
+.catalogue-list{
+  .catalogue-list__text{
+    font-size: 32px;
+    font-family: Gilroy,sans-serif;
+    font-weight: 700;
+
+    line-height: calc(40/32*100%);
+    letter-spacing: .5px;
+
+    color: white;
+
+    padding: 24px 0 32px 0;
+  }
+  .game-catalogue{
+    .search-catalogue{
+      display: flex;
+      margin: 0 0 28px 0;
+      .input-catalogue{
+        display: flex;
+
+        mat-icon{
+          padding: 19px 12px 20px 19px;
+          color: white;
+          background: #1F3335;
+        }
+        .search-input{
+          background: #1F3335;
+          border: none;
+
+          outline: none;
+
+          padding: 16px 97px 16px 0;
+          width: 328px;
+
+          font-size: 16px;
+          font-family: Roboto,sans-serif;
+          font-weight: 400;
+
+          line-height: calc(24/16*100%);
+
+          color: white;
+
+          &::placeholder{
+            font-size: 16px;
+            font-family: Roboto,sans-serif;
+            font-weight: 400;
+
+            line-height: calc(24/16*100%);
+
+            color: #82898B;
+
+          }
+        }
+      }
+      .select-catalogue{
+        display: flex;
+        align-items: center;
+
+      }
+    }
+  }
+}
+::ng-deep{
+  .mat-form-field-wrapper{
+    padding: 0 !important;
+  }
+}

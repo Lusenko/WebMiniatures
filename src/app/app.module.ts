@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
 import { MainComponent } from './main/main.component';
 import { CatalogueListComponent } from './main/catalogue-list/catalogue-list.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CatalogueListComponent } from './main/catalogue-list/catalogue-list.com
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

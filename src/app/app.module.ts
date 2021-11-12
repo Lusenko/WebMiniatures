@@ -7,13 +7,15 @@ import {SideMenuComponent} from "./side-menu/side-menu.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
 import { MainComponent } from './main/main.component';
+import { CatalogueListComponent } from './main/catalogue-list/catalogue-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SideMenuComponent,
-    MainComponent
+    MainComponent,
+    CatalogueListComponent
   ],
   imports: [
     BrowserModule,

@@ -8,9 +8,9 @@
           <input type="text" class="search-input" placeholder="Search by catalogue name">
         </div>
         <div class="select-catalogue">
-          <p>Sort by:</p>
+          <p class="select-catalogue__text" >Sort by:</p>
           <mat-form-field appearance="fill">
-            <mat-label>Favorite food</mat-label>
+            <mat-label>Date of Creation (latest first)</mat-label>
             <mat-select>
               <mat-option *ngFor="let food of foods" [value]="food.value">
                 {{food.viewValue}}

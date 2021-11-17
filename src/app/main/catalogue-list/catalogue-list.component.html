@@ -9,11 +9,11 @@
         </div>
         <div class="select-catalogue">
           <p class="select-catalogue__text" >Sort by:</p>
-          <mat-form-field appearance="fill">
+          <mat-form-field [floatLabel]="'never'">
             <mat-label>Date of Creation (latest first)</mat-label>
             <mat-select>
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
+              <mat-option *ngFor="let option of foods" [value] = 'option'>
+                {{option.viewValue}}
               </mat-option>
             </mat-select>
           </mat-form-field>

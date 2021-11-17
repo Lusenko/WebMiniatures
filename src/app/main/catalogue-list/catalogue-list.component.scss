@@ -58,18 +58,23 @@
         display: flex;
         align-items: center;
 
+        margin: 0 0 0 32px;
+
         .select-catalogue__text{
           font-size: 16px;
           font-weight: 400;
           line-height: calc(24/16*100%);
 
+          margin: 0 8px 0 0;
+
           color: #82898B;
         }
         mat-form-field{
+          padding: 0 0 5px 0;
           mat-label{
             font-size: 16px;
-            font-family: Gilroy,sans-serif;
             font-weight: 700;
+            font-family: Gilroy,sans-serif;
 
             line-height: calc(24/16*100%);
 
@@ -78,7 +83,6 @@
             color: #009E8E;
           }
         }
-
       }
     }
   }
@@ -92,11 +96,11 @@
       background: rgba(0,0,0,0);
 
       .mat-form-field-infix{
-        padding: 0 !important;
         border: none;
         width: 250px;
         .mat-select-arrow-wrapper{
           transform: none !important;
+          display: flex;
           .mat-select-arrow{
             color: #009E8E;
           }

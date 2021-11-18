@@ -3,20 +3,28 @@
   <div class="game-catalogue">
     <form>
       <div class="search-catalogue">
-        <div class="input-catalogue">
-          <mat-icon>search</mat-icon>
-          <input type="text" class="search-input" placeholder="Search by catalogue name">
+        <div class="search">
+          <div class="input-catalogue">
+            <mat-icon>search</mat-icon>
+            <input type="text" class="search-input" placeholder="Search by catalogue name">
+          </div>
+          <div class="select-catalogue">
+            <p class="select-catalogue__text" >Sort by:</p>
+            <mat-form-field [floatLabel]="'never'">
+              <mat-label>Sorted</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let option of foods" [value] = 'option'>
+                  {{option.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
         </div>
-        <div class="select-catalogue">
-          <p class="select-catalogue__text" >Sort by:</p>
-          <mat-form-field [floatLabel]="'never'">
-            <mat-label>Date of Creation (latest first)</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let option of foods" [value] = 'option'>
-                {{option.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+        <div class="search-catalogue__button">
+          <button class="search-button">
+            <mat-icon>add_circle_outline</mat-icon>
+            <p class="search-button-text">Add Catalogue</p>
+          </button>
         </div>
       </div>
     </form>

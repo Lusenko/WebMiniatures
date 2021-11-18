@@ -16,8 +16,13 @@ export class CatalogueListComponent implements OnInit {
   ngOnInit(): void {
   }
   foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
+    {value: '0', viewValue: 'Alphabet (A - Z)'},
+    {value: '1', viewValue: 'Alphabet (Z - A)'},
+    {value: '3', viewValue: 'Date of Creation (latest first)'},
+    {value: '4', viewValue: 'Date of Creation (earliest first)'},
+    {value: '5', viewValue: 'Date of Editing (latest first)'},
+    {value: '6', viewValue: 'Date of Editing (earliest first)'},
+    {value: '7', viewValue: 'Increase of amount of items'},
+    {value: '8', viewValue: 'Decrease of amount of items'},
   ];
 }

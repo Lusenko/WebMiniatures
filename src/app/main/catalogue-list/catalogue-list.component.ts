@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {GetGameListService} from "../../service/get-game-list.service";
+import {Game} from "../../interface/game";
+import {tap} from "rxjs/operators";
 
 interface Food {
   value: string;
@@ -11,18 +14,14 @@ interface Food {
 })
 export class CatalogueListComponent implements OnInit {
 
-  constructor() { }
+  games: Game[] = [];
+
+  constructor(private readonly getGameListService: GetGameListService) { }
 
   ngOnInit(): void {
+    this.getGameListService.localGame$.pipe(
+      tap(item => this.games = item)
+    ).subscribe()
   }
-  foods: Food[] = [
-    {value: '0', viewValue: 'Alphabet (A - Z)'},
-    {value: '1', viewValue: 'Alphabet (Z - A)'},
-    {value: '3', viewValue: 'Date of Creation (latest first)'},
-    {value: '4', viewValue: 'Date of Creation (earliest first)'},
-    {value: '5', viewValue: 'Date of Editing (latest first)'},
-    {value: '6', viewValue: 'Date of Editing (earliest first)'},
-    {value: '7', viewValue: 'Increase of amount of items'},
-    {value: '8', viewValue: 'Decrease of amount of items'},
-  ];
+
 }

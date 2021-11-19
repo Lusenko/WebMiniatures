@@ -13,6 +13,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -22,17 +23,18 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     MainComponent,
     CatalogueListComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatInputModule,
-    MatAutocompleteModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatInputModule,
+        MatAutocompleteModule,
+        MatCardModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

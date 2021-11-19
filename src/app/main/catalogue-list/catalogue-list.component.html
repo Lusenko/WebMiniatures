@@ -13,8 +13,7 @@
             <mat-form-field [floatLabel]="'never'">
               <mat-label>Sorted</mat-label>
               <mat-select>
-                <mat-option *ngFor="let option of foods" [value] = 'option'>
-                  {{option.viewValue}}
+                <mat-option>
                 </mat-option>
               </mat-select>
             </mat-form-field>
@@ -28,5 +27,17 @@
         </div>
       </div>
     </form>
+  </div>
+  <div class="game-list">
+    <mat-card *ngFor="let game of games">
+      <img src="{{game.images}}" alt="">
+      <div class="game-list__icon">
+        <h2 class="game-list__title">{{game.title}}</h2>
+        <mat-icon>more_vert</mat-icon>
+      </div>
+      <div class="game-list__quantity">
+        <p class="game-quantity">{{game.quantity}} Items</p>
+      </div>
+    </mat-card>
   </div>
 </div>

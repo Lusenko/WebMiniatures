@@ -1,7 +1,7 @@
 <div class="catalogue-list">
   <h2 class="catalogue-list__text">Catalogue List</h2>
   <div class="game-catalogue">
-    <form>
+    <form [formGroup]="formGroup">
       <div class="search-catalogue">
         <div class="search">
           <div class="input-catalogue">
@@ -12,7 +12,7 @@
             <p class="select-catalogue__text" >Sort by:</p>
             <mat-form-field [floatLabel]="'never'">
               <mat-label>Sorted</mat-label>
-              <mat-select>
+              <mat-select formControlName="select">
                 <mat-option>
                 </mat-option>
               </mat-select>
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="search-catalogue__button">
-          <button class="search-button">
+          <button class="search-button" (click)="openModalDialog()">
             <mat-icon>add_circle_outline</mat-icon>
             <p class="search-button-text">Add Catalogue</p>
           </button>
@@ -29,7 +29,7 @@
     </form>
   </div>
   <div class="game-list">
-    <mat-card *ngFor="let game of games">
+    <mat-card *ngFor="let game of games$ | async">
       <img src="{{game.images}}" alt="">
       <div class="game-list__icon">
         <h2 class="game-list__title">{{game.title}}</h2>

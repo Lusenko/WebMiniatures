@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {GetGameListService} from "../../service/get-game-list.service";
 import {Game} from "../../interface/game";
 import {tap} from "rxjs/operators";
+import {Option} from "./option";
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {ModalDialogComponent} from "../../modal-dialog/modal-dialog.component";
+import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 
 interface Food {
   value: string;
@@ -14,14 +18,22 @@ interface Food {
 })
 export class CatalogueListComponent implements OnInit {
 
-  games: Game[] = [];
+  games$ = this.getGameListService.localGame$;
+  option = Option
+  formGroup: FormGroup;
 
-  constructor(private readonly getGameListService: GetGameListService) { }
+  constructor(private readonly getGameListService: GetGameListService,
+              private readonly formBuilder: FormBuilder,
+              private readonly dialog: MatDialog) {
 
-  ngOnInit(): void {
-    this.getGameListService.localGame$.pipe(
-      tap(item => this.games = item)
-    ).subscribe()
+    this.formGroup = this.formBuilder.group({
+      select: ''
+    })
   }
 
+  ngOnInit(): void {
+  }
+  openModalDialog(){
+    this.dialog.open(ModalDialogComponent)
+  }
 }

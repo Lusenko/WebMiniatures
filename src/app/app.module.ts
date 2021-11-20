@@ -14,6 +14,9 @@ import {MatOptionModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatCardModule} from "@angular/material/card";
+import {ReactiveFormsModule} from "@angular/forms";
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -21,20 +24,23 @@ import {MatCardModule} from "@angular/material/card";
     HeaderComponent,
     SideMenuComponent,
     MainComponent,
-    CatalogueListComponent
+    CatalogueListComponent,
+    ModalDialogComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatSliderModule,
-        MatIconModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatOptionModule,
-        MatInputModule,
-        MatAutocompleteModule,
-        MatCardModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatDialogModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

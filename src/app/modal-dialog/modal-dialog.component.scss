@@ -1,0 +1,51 @@
+.modal-dialog__body{
+  .modal-dialog-container{
+    padding: 0 24px;
+    .modal-dialog__title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .modal-title{
+        font-size: 24px;
+        font-family: Gilroy,sans-serif;
+        font-weight: 700;
+
+        line-height: calc(32/24*100%);
+
+        letter-spacing: .5px;
+
+        color: white;
+
+      }
+      .mat-icon{
+        color: white;
+        margin: 0 5px 0 0;
+      }
+    }
+    .modal-dialog__img{
+      border: 1px dashed #7C8C99;
+      border-radius: 8px;
+      .modal-img{
+        text-align: center;
+      }
+      .modal-text{
+        text-align: center;
+      }
+    }
+  }
+}
+::ng-deep{
+  .cdk-global-overlay-wrapper{
+    .cdk-overlay-pane{
+      transform: none !important;
+      .mat-dialog-container{
+        background: #2E3B3E !important;
+        padding: 0 !important;
+        border-radius: 2px;
+      }
+    }
+    .mat-dialog-title{
+      margin: 0 !important;
+    }
+  }
+}

@@ -11,9 +11,9 @@
           <div class="select-catalogue">
             <p class="select-catalogue__text" >Sort by:</p>
             <mat-form-field [floatLabel]="'never'">
-              <mat-label>Sorted</mat-label>
               <mat-select formControlName="select">
-                <mat-option>
+                <mat-option *ngFor="let options of option | keyvalue" [value]="options.key">
+                  {{options.value}}
                 </mat-option>
               </mat-select>
             </mat-form-field>

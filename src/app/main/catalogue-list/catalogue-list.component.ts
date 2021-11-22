@@ -27,7 +27,7 @@ export class CatalogueListComponent implements OnInit {
               private readonly dialog: MatDialog) {
 
     this.formGroup = this.formBuilder.group({
-      select: ''
+      select: 'dateOfCreatingLf'
     })
   }
 
@@ -37,7 +37,7 @@ export class CatalogueListComponent implements OnInit {
     this.dialog.open(ModalDialogComponent,{
       restoreFocus: false,
       width: '488px',
-      height: '800px',
+      height: '800px'
     })
   }
 }

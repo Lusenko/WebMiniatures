@@ -11,3 +11,9 @@
     overflow: hidden;
   }
 }
+::ng-deep{
+  perfect-scrollbar>.ps.ps--active-x>.ps__rail-x,
+  perfect-scrollbar>.ps.ps--active-y>.ps__rail-y{
+    background-color: transparent !important;
+  }
+}

@@ -14,6 +14,11 @@ export class SideMenuComponent implements OnInit {
   ngOnInit(): void {
   }
   openModalDialog(){
-    this.dialog.open(ModalDialogComponent)
+    this.dialog.open(ModalDialogComponent,
+      {
+          autoFocus: false,
+          panelClass: 'modal-dialog',
+          width: '488px'
+      })
   }
 }

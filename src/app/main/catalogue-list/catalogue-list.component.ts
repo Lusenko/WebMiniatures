@@ -34,10 +34,10 @@ export class CatalogueListComponent implements OnInit {
   ngOnInit(): void {
   }
   openModalDialog(){
-    this.dialog.open(ModalDialogComponent,{
-      restoreFocus: false,
-      width: '488px',
-      height: '800px'
+    this.dialog.open(ModalDialogComponent, {
+      autoFocus: false,
+      panelClass: 'modal-dialog',
+      width: '488px'
     })
   }
 }

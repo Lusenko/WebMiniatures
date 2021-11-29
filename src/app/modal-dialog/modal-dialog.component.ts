@@ -10,8 +10,7 @@ import {SideMenuComponent} from "../side-menu/side-menu.component";
 })
 export class ModalDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: CatalogueListComponent,
-              @Inject(MAT_DIALOG_DATA) public data1: SideMenuComponent) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

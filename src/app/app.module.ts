@@ -17,6 +17,11 @@ import {MatCardModule} from "@angular/material/card";
 import {ReactiveFormsModule} from "@angular/forms";
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from "ngx-perfect-scrollbar";
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -39,9 +44,14 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatAutocompleteModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    PerfectScrollbarModule
+
   ],
-  providers: [],
+  providers: [{
+    provide: PERFECT_SCROLLBAR_CONFIG,
+    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

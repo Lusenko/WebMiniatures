@@ -4,14 +4,37 @@
       <h2 mat-dialog-title class="modal-title">Add Item</h2>
       <mat-icon>close</mat-icon>
     </div>
-    <div class="modal-dialog__img">
-      <div class="img-item">
-        <div class="item__img">
-          <img src="assets/images/add-catalogue/Union.svg" alt="">
+    <perfect-scrollbar>
+      <div class="modal-dialog__content">
+        <div class="modal-dialog__img">
+          <div class="img-item">
+            <div class="item__img">
+              <img src="assets/images/add-catalogue/Union.svg" alt="">
+            </div>
+            <div class="item__text">
+              <h3 class="modal-text">Upload a cover image</h3>
+            </div>
+          </div>
         </div>
-        <div class="item__text">
-          <h3 class="modal-text">Upload a cover image</h3>
-        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Catalogue</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea matInput
+                    #textAreaValue
+                    cdkTextareaAutosize
+                    cdkAutosizeMinRows="1"></textarea>
+          <mat-hint align="end">{{textAreaValue.value.length}}/300</mat-hint>
+        </mat-form-field>
+      </div>
+    </perfect-scrollbar>
+    <hr class="modal-dialog__line">
+    <div class="modal-dialog__bottom">
+      <div class="bottom-buttons">
+        <button class="cancel-button">Cancel</button>
+        <button class="save-button">Save</button>
       </div>
     </div>
   </div>

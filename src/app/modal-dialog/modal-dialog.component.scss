@@ -1,11 +1,3 @@
-
-::ng-deep{
-  .cdk-global-overlay-wrapper{
-    .cdk-overlay-pane{
-      transform: none !important;
-    }
-  }
-}
 .modal-dialog__body{
   .modal-dialog-container{
     padding: 0 24px;
@@ -36,6 +28,7 @@
       justify-content: center;
       border: 1px dashed #7C8C99;
       border-radius: 8px;
+      margin: 0 0 32px 0;
       .img-item{
         display: inline-block;
         padding: 119px 0;
@@ -55,6 +48,49 @@
         }
       }
     }
+    .modal-dialog__line{
+      margin: 0 -48px;
+      border: .1px solid rgba(255, 255, 255, 0.25);
+    }
+    .modal-dialog__bottom{
+      display: flex;
+      justify-content: flex-end;
+      .bottom-buttons{
+        padding: 16px 0;
+        .cancel-button{
+          font-size: 18px;
+          font-family: Gilroy,sans-serif;
+          font-weight: 700;
+
+          line-height: calc(24/18*100%);
+
+          letter-spacing: .5px;
+
+          color: white;
+          background: transparent;
+
+          border: none;
+        }
+        .save-button{
+          font-size: 18px;
+          font-family: Gilroy,sans-serif;
+          font-weight: 700;
+
+          line-height: calc(24/18*100%);
+
+          letter-spacing: .5px;
+
+          color: white;
+          background: #009E8E;
+
+          border-radius: 2px;
+          border: none;
+
+          padding: 12px 36px 12px 37px;
+          margin: 0 0 0 43px;
+        }
+      }
+    }
   }
 }
 ::ng-deep{
@@ -62,13 +98,55 @@
     .cdk-overlay-pane{
       transform: none !important;
       .mat-dialog-container{
-        background: #2E3B3E !important;
+        background: #2E3B3E;
         padding: 0 !important;
         border-radius: 2px;
+        overflow: hidden;
+
+        .mat-form-field{
+          background: #1F3335;
+          margin: 0 0 32px 0;
+          border-radius: 2px;
+          width: 100%;
+          .mat-form-field-infix{
+            padding: 24px 46px 8px 16px;
+            .mat-form-field-label-wrapper{
+              .mat-form-field-label{
+                top:23px !important;
+                margin: 0 !important;
+                padding: 8px 0 0 16px;
+                color: #82898B;
+              }
+            }
+            .mat-input-element{
+              font-size: 16px;
+              font-weight: 400;
+              line-height: calc(24/16*100%);
+
+              color: white;
+            }
+
+          }
+        }
       }
     }
     .mat-dialog-title{
       margin: 0 !important;
     }
+  }
+  .mat-form-field-subscript-wrapper{
+    top: unset;
+    .mat-form-field-hint-wrapper{
+      .mat-hint{
+        font-size: 12px;
+        font-weight: 400;
+        color: #82898B;
+      }
+    }
+  }
+}
+::ng-deep{
+  textarea.mat-input-element{
+    height: 128px;
   }
 }

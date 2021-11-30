@@ -32,7 +32,41 @@ export class CatalogueListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.formGroup.get('select')?.valueChanges.pipe(
+      tap(item => this.sorted(item))
+    ).subscribe()
   }
+
+  sorted(word:string){
+    switch (word){
+      case 'az': this.sortByAZ()
+        break;
+      case 'za': this.sortByZA()
+        break;
+      case 'increaseAmount': this.sortByAmount()
+        break;
+    }
+  }
+
+  sortByAZ(){
+    this.getGameListService.localGame$.pipe(
+      tap(item => item.sort((a,b) => a.title.localeCompare(b.title)))
+    ).subscribe()
+  }
+
+  sortByZA(){
+    this.getGameListService.localGame$.pipe(
+      tap(item => item.sort((a,b) => b.title.localeCompare(a.title)))
+    ).subscribe()
+  }
+
+  sortByAmount(){
+    this.getGameListService.localGame$.pipe(
+      tap(item => item.sort((a,b) => a.quantity - b.quantity))
+    ).subscribe()
+  }
+
+
   openModalDialog(){
     this.dialog.open(ModalDialogComponent, {
       autoFocus: false,

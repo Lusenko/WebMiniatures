@@ -144,7 +144,6 @@
           color: white;
         }
         mat-icon{
-          margin: 0 14px 0 0;
           color: white;
         }
       }
@@ -227,6 +226,15 @@
           }
           &:last-child{
             padding: 0 16px 8px 16px;
+          }
+        }
+      }
+      .mat-menu-panel{
+        background: #2E3B3E;
+        .mat-menu-item{
+          color: #A3A8A8;
+          .mat-icon-no-color{
+            color: #A3A8A8;
           }
         }
       }

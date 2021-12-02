@@ -33,7 +33,19 @@
       <img src="{{game.images}}" alt="">
       <div class="game-list__icon">
         <h2 class="game-list__title">{{game.title}}</h2>
-        <mat-icon>more_vert</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu='matMenu'>
+          <button mat-menu-item>
+            <mat-icon>delete</mat-icon>
+            <span>Delete</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>create</mat-icon>
+            <span>Edit</span>
+          </button>
+        </mat-menu>
       </div>
       <div class="game-list__quantity">
         <p class="game-quantity">{{game.quantity}} Items</p>

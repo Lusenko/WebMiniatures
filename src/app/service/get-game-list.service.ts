@@ -17,5 +17,11 @@ export class GetGameListService {
   private game$ = new BehaviorSubject<Game[]>(this.gameList);
   localGame$ = this.game$.asObservable()
 
+  addCatalogue(game: Game){
+    game.id = this.gameList.length;
+    this.gameList.push(game);
+    this.game$.next(this.gameList);
+  }
+
   constructor() { }
 }

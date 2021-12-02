@@ -1,6 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {GetGameListService} from "../../service/get-game-list.service";
-import {Game} from "../../interface/game";
 import {tap} from "rxjs/operators";
 import {Option} from "./option";
 import {FormBuilder, FormGroup} from "@angular/forms";
@@ -72,6 +71,8 @@ export class CatalogueListComponent implements OnInit {
       autoFocus: false,
       panelClass: 'modal-dialog',
       width: '488px'
-    })
+    }).afterClosed().pipe(
+      tap(item => this.getGameListService.addCatalogue(item))
+    ).subscribe()
   }
 }

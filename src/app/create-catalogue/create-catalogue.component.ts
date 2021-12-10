@@ -4,14 +4,14 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-modal-dialog',
-  templateUrl: './modal-dialog.component.html',
-  styleUrls: ['./modal-dialog.component.scss']
+  templateUrl: './create-catalogue.component.html',
+  styleUrls: ['./create-catalogue.component.scss']
 })
-export class ModalDialogComponent implements OnInit {
+export class CreateCatalogueComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  constructor(private readonly matDialogRef: MatDialogRef<ModalDialogComponent>,private readonly formBuilder: FormBuilder) {
+  constructor(private readonly matDialogRef: MatDialogRef<CreateCatalogueComponent>, private readonly formBuilder: FormBuilder) {
     this.formGroup = this.formBuilder.group({
       id: 0,
       images: ['assets/images/main/gameList/Rectangle1.svg'],

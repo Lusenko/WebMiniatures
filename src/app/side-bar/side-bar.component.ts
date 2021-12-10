@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {ModalDialogComponent} from "../modal-dialog/modal-dialog.component";
+import {CreateCatalogueComponent} from "../create-catalogue/create-catalogue.component";
 
 @Component({
   selector: 'app-side-menu',
-  templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.scss']
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss']
 })
-export class SideMenuComponent implements OnInit {
+export class SideBarComponent implements OnInit {
 
   constructor( private readonly dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
   openModalDialog(){
-    this.dialog.open(ModalDialogComponent,
+    this.dialog.open(CreateCatalogueComponent,
       {
           autoFocus: false,
-          panelClass: 'modal-dialog',
+          panelClass: 'create-catalogue',
           width: '488px'
       })
   }

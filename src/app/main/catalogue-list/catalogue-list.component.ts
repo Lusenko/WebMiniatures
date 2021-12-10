@@ -3,7 +3,7 @@ import {GetGameListService} from "../../service/get-game-list.service";
 import {tap} from "rxjs/operators";
 import {Option} from "./option";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {ModalDialogComponent} from "../../modal-dialog/modal-dialog.component";
+import {CreateCatalogueComponent} from "../../create-catalogue/create-catalogue.component";
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 
 interface Food {
@@ -71,9 +71,9 @@ export class CatalogueListComponent implements OnInit {
 
 
   openModalDialog(){
-    this.dialog.open(ModalDialogComponent, {
+    this.dialog.open(CreateCatalogueComponent, {
       autoFocus: false,
-      panelClass: 'modal-dialog',
+      panelClass: 'create-catalogue',
       width: '488px'
     }).afterClosed().pipe(
       tap(item => this.getGameListService.addCatalogue(item))

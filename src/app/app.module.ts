@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import {SideMenuComponent} from "./side-menu/side-menu.component";
+import {SideBarComponent} from "./side-bar/side-bar.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
 import { MainComponent } from './main/main.component';
@@ -15,7 +15,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatCardModule} from "@angular/material/card";
 import {ReactiveFormsModule} from "@angular/forms";
-import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
+import { CreateCatalogueComponent } from './create-catalogue/create-catalogue.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from "ngx-perfect-scrollbar";
 import {MatButtonModule} from "@angular/material/button";
@@ -30,10 +30,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [
     AppComponent,
     HeaderComponent,
-    SideMenuComponent,
+    SideBarComponent,
     MainComponent,
     CatalogueListComponent,
-    ModalDialogComponent
+    CreateCatalogueComponent
   ],
   imports: [
     BrowserModule,

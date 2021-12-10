@@ -36,6 +36,10 @@ export class CatalogueListComponent implements OnInit {
     ).subscribe()
   }
 
+  delete(id: number){
+    this.getGameListService.deleteCatalogue(id);
+  }
+
   sorted(word:string){
     switch (word){
       case 'az': this.sortByAZ()

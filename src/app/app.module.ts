@@ -20,6 +20,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from "ngx-perfect-scrollbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import { AppRoutingModule } from './app-routing.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -49,7 +50,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatDialogModule,
     PerfectScrollbarModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    AppRoutingModule
 
   ],
   providers: [{

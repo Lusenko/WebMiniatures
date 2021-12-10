@@ -13,11 +13,11 @@ export class ModalDialogComponent implements OnInit {
 
   constructor(private readonly matDialogRef: MatDialogRef<ModalDialogComponent>,private readonly formBuilder: FormBuilder) {
     this.formGroup = this.formBuilder.group({
-      id: [0],
+      id: 0,
       images: ['assets/images/main/gameList/Rectangle1.svg'],
       title: '',
       description: '',
-      quantity: [0]
+      quantity: 0
     })
   }
 

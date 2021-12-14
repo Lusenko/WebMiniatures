@@ -1,0 +1,19 @@
+.main{
+  display: flex;
+
+  app-side-menu{
+    max-width: 320px;
+    width: 100%;
+  }
+  app-main{
+    width: 100%;
+    background: #061C1F;
+    overflow: hidden;
+  }
+}
+::ng-deep{
+  perfect-scrollbar>.ps.ps--active-x>.ps__rail-x,
+  perfect-scrollbar>.ps.ps--active-y>.ps__rail-y{
+    background-color: transparent !important;
+  }
+}

@@ -1,21 +1,17 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {GetGameListService} from "../../service/get-game-list.service";
-import {tap} from "rxjs/operators";
+import { Component, OnInit } from '@angular/core';
 import {Option} from "./option";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {CreateCatalogueComponent} from "../../create-catalogue/create-catalogue.component";
-import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
+import {GetGameListService} from "../../../service/get-game-list.service";
+import {MatDialog} from "@angular/material/dialog";
+import {tap} from "rxjs/operators";
+import {CreateCatalogueComponent} from "../create-catalogue/create-catalogue.component";
 
-interface Food {
-  value: string;
-  viewValue: string;
-}
 @Component({
-  selector: 'app-catalogue-list',
-  templateUrl: './catalogue-list.component.html',
-  styleUrls: ['./catalogue-list.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class CatalogueListComponent implements OnInit {
+export class MainComponent implements OnInit {
 
   games$ = this.getGameListService.localGame$;
   option = Option
@@ -79,4 +75,5 @@ export class CatalogueListComponent implements OnInit {
       tap(item => this.getGameListService.addCatalogue(item))
     ).subscribe()
   }
+
 }

@@ -26,45 +26,20 @@
 
         .search{
           display: flex;
+
           .input-catalogue{
             display: flex;
+            align-items: center;
 
             mat-icon{
               padding: 19px 12px 20px 19px;
-              color: white;
               background: #1F3335;
+              color: white;
+
               border-radius: 2px 0 0 2px;
             }
-            .search-input{
-              background: #1F3335;
-              border: none;
-              border-radius: 0 2px 2px 0;
-
-              outline: none;
-
-              padding: 16px 97px 16px 0;
-              width: 328px;
-
-              font-size: 16px;
-              font-family: Roboto,sans-serif;
-              font-weight: 400;
-
-              line-height: calc(24/16*100%);
-
-              color: white;
-
-              &::placeholder{
-                font-size: 16px;
-                font-family: Roboto,sans-serif;
-                font-weight: 400;
-
-                line-height: calc(24/16*100%);
-
-                color: #82898B;
-
-              }
-            }
           }
+
           .select-catalogue{
             display: flex;
             align-items: center;
@@ -174,10 +149,8 @@
       }
     }
   }
-
-
 }
-::ng-deep{
+::ng-deep.select-text{
   .mat-form-field-wrapper{
     padding: 0 !important;
 
@@ -211,7 +184,8 @@
   .mat-form-field-underline{
     width: unset !important;
   }
-
+}
+::ng-deep{
   .cdk-overlay-container{
     .cdk-overlay-pane{
       transform: translateX(-62px) translateY(-32px) !important;
@@ -249,6 +223,35 @@
           }
         }
       }
+    }
+  }
+}
+
+::ng-deep.search-input{
+  background: #1F3335 !important;
+
+  .mat-form-field-wrapper{
+    padding: unset !important;
+    .mat-form-field-flex{
+      .mat-form-field-infix{
+        width: 425px !important;
+        padding: 0.639em 110px 1.339em 0 !important;
+
+        .mat-form-field-label-wrapper{
+          .mat-form-field-label{
+            mat-label{
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+
+              color: #82898B;
+            }
+          }
+        }
+      }
+    }
+    .mat-form-field-underline{
+      width: unset !important;
     }
   }
 }

@@ -27,6 +27,4 @@ export class GetGameListService {
     this.gameList.splice(this.gameList.findIndex(item => item.id === id), 1);
     this.game$.next(this.gameList);
   }
-
-  constructor() { }
 }

@@ -8,12 +8,16 @@ export class AuthService {
   login: string = 'admin';
   pass: string = 'admin';
 
-  authBool: boolean = false;
-
   checkAuth(userName: string, userPass: string){
     if(userName === this.login && userPass === this.pass){
-      this.authBool = true;
+      sessionStorage.setItem('key','true');
+      return true;
     }
+    return
+  }
+
+  get auth(){
+    return sessionStorage.getItem('key') !== null;
   }
 
 

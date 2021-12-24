@@ -22,14 +22,15 @@ export class MainComponent implements OnInit {
               private readonly dialog: MatDialog) {
 
     this.formGroup = this.formBuilder.group({
-      select: 'dateOfCreatingLf'
+      select: 'dateOfCreatingLf',
     })
   }
 
   ngOnInit(): void {
     this.formGroup.get('select')?.valueChanges.pipe(
       tap(item => this.sorted(item))
-    ).subscribe()
+    ).subscribe();
+
   }
 
   delete(id: number){
@@ -75,5 +76,4 @@ export class MainComponent implements OnInit {
       tap(item => this.getGameListService.addCatalogue(item))
     ).subscribe()
   }
-
 }

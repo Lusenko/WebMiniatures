@@ -10,19 +10,21 @@
           <div class="search-catalogue">
             <div class="search">
               <div class="input-catalogue">
-                <mat-icon>search</mat-icon>
                 <mat-form-field class="search-input">
-                  <mat-label>Search by catalogue name</mat-label>
-                  <input matInput type="text" class="search-input" formControlName="searchInput">
-                  <mat-autocomplete>
-                    <mat-option></mat-option>
+                  <mat-label>Search catalogue by name</mat-label>
+                  <input matInput type="text" class="search-input" formControlName="searchInput" [matAutocomplete]="auth">
+                  <mat-icon matPrefix>search</mat-icon>
+                  <mat-autocomplete #auth='matAutocomplete' class="search-autocomplete">
+                    <mat-option *ngFor="let game of games$ | async" [value]="game.title">
+                      {{game.title}}
+                    </mat-option>
                   </mat-autocomplete>
                 </mat-form-field>
               </div>
               <div class="select-catalogue">
                 <p class="select-catalogue__text" >Sort by:</p>
                 <mat-form-field [floatLabel]="'never'" class="select-text">
-                  <mat-select formControlName="select">
+                  <mat-select panelClass="mat-select-catalogue" formControlName="select">
                     <mat-option *ngFor="let options of option | keyvalue" [value]="options.key">
                       {{options.value}}
                     </mat-option>
